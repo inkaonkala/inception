@@ -9,3 +9,5 @@ RUN chmod +x /usr/local/bin/setup.sh
 EXPOSE 9000
 
 CMD ["/usr/local/bin/setup.sh"]
+
+
