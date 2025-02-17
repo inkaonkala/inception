@@ -9,10 +9,8 @@ services:
     networks:
       - inception
     restart: always
-    environment:
-      - MYSQL_DATABASE=wordpress_sb
-      - MYSQL_USER=wp_user
-      - MYSQL_PASSWORD=wp_pass
+    env_file:
+      - .env
 
 
   nginx:
@@ -34,14 +32,6 @@ services:
    networks:
            - inception
    restart: always
-#   environment:
-#      - MYSQL_ROOT_PASSWORD=root_pass
-#      - MYSQL_DATABASE=wordpress_sb
-#      - MYSQL_USER=wp_user
-#      - MYSQL_PASSWORD=wp_pass
-#      - ADMIN_USER=adminuser
-#      - ADMIN_PASSWORD=supersecurepassword
-#      - ADMIN_EMAIL=iniska@student.hive.fi
    env_file:
       - .env
 
