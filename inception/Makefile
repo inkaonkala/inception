@@ -17,6 +17,9 @@ fclean: clean
 		docker volume rm $$(docker volume ls -q); \
 	fi
 	sudo rm -rf ~/inception/data/mariadb ~/inception/data/wordpress
+	sudo rm -rf /home/iniska/data/mariadb /home/iniska/data/wordpress
+	sudo rm -rf /var/lib/docker/volumes/srcs_mariadb /var/lib/docker/volumes/srcs_wordpress
+	sudo mkdir -p ~/data/mariadb ~/data/wordpress
 
 re: fclean  all
 

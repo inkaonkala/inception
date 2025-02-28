@@ -34,6 +34,6 @@ EOF
 
 echo "MariaDB is now set up and ready!"
 
-#wait this was needed at some point for the wp to connect
+wait
 #exec mysqld_safe --user=mysql --datadir=/var/lib/mysql --bind-address=0.0.0.0 --skip-networking=0
 
